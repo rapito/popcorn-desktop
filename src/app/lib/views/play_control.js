@@ -37,7 +37,6 @@
       App.vent.on('sub:lang', this.switchSubtitle.bind(this));
       App.vent.on('audio:lang', this.switchAudio.bind(this));
       App.vent.on('update:subtitles', function(subs) {
-        console.log('update:subtitles');
         this.views.sub.updateLangs(subs);
         // Switch to default subtitle when subtitles are actually updated.
         var lang = this.subtitle_selected || Settings.subtitle_language;
